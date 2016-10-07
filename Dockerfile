@@ -57,6 +57,10 @@ RUN yum clean all && \
     yum install -y $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum clean all  && \
+	cd /tmp && \
+	wget https://nodejs.org/dist/v4.6.0/node-v4.6.0-linux-x64.tar.xz && \
+	cd /usr/local && \
+	tar --strip-components 1 -xzf /tmp/node-v4.6.0-linux-x64.tar.xz && \
     localedef -f UTF-8 -i en_US en_US.UTF-8
 
 COPY containerfiles/ /
