@@ -53,7 +53,7 @@ RUN yum clean all && \
     yum-config-manager --enable rhel-7-server-ose-3.2-rpms && \
     yum-config-manager --enable rhel-7-server-rpms && \
     yum repolist && \
-    INSTALL_PKGS="rsync gettext git tar zip unzip java-1.8.0-openjdk-devel java-1.8.0-openjdk atomic-openshift-clients nss_wrapper which" && \
+    INSTALL_PKGS="rsync gettext git tar zip unzip java-1.8.0-openjdk-devel java-1.8.0-openjdk atomic-openshift-clients nss_wrapper which wget" && \
     yum install -y $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum clean all  && \
