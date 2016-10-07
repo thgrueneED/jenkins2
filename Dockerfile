@@ -60,7 +60,7 @@ RUN yum clean all && \
 	cd /tmp && \
 	wget https://nodejs.org/dist/v4.6.0/node-v4.6.0-linux-x64.tar.xz && \
 	cd /usr/local && \
-	tar --strip-components 1 -xzf /tmp/node-v4.6.0-linux-x64.tar.xz && \
+	tar --strip-components 1 -xf /tmp/node-v4.6.0-linux-x64.tar.xz && \
     localedef -f UTF-8 -i en_US en_US.UTF-8
 
 COPY containerfiles/ /
