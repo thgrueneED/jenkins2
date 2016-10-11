@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  creationTimestamp: null
+  name: jenkins2-build
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: jenkins2:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      uri: https://github.com/thgrueneED/jenkins2.git
+      ref: npm
+    type: Git
+  strategy:
+    dockerStrategy:
+      noCache: true
+    type: Docker
+  triggers: []
+status:
+  lastVersion: 0

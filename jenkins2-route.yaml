@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: null
+  name: jenkins2
+spec:
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: jenkins2
+    weight: 100
+status:
+  ingress: null
